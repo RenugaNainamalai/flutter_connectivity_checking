@@ -1,3 +1,4 @@
+import 'package:check_connectivity/connectivity_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -34,18 +35,25 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-    //   body: ConnectivityWidget(
-    //   Center(
-    //     child: Column(
-    //       mainAxisAlignment: MainAxisAlignment.center,
-    //       children: <Widget>[
-    //         Text(
-    //           'You have pushed the button this many times:',
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // )
+       body: ConnectivityWidget(
+        builder: (context, isOnline) => Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "${isOnline ? 'Online' : 'Offline'}",
+                style: TextStyle(
+                    fontSize: 30, color: isOnline ? Colors.green : Colors.red),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+             
+            ],
+          ),
+       
+        ),
+      ), 
     );
   }
 }

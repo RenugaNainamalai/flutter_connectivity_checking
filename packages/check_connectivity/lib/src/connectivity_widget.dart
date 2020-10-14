@@ -164,14 +164,37 @@ class _NoConnectivityBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(8),
-        width: double.infinity,
-        color: Colors.red,
-        child: Text(
-          "No connectivity",
-          style: TextStyle(
-              fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
-        ));
+       // padding: EdgeInsets.all(8),
+       // width: double.infinity,
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
+            child: Column(
+              children: <Widget>[
+             Padding(
+               padding: const EdgeInsets.all(50.0),
+               child: Text(
+            "Please check your network connection",
+            style: TextStyle(
+                  fontSize: 16, color: Colors.red, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+             ),
+          Text(
+            "TRY AGAIN",
+            style: TextStyle(
+                fontSize: 25, color: Colors.blue, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          
+          
+              ],
+            )
+            
+          ),
+        ),
+        
+        );
   }
 }

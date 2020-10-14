@@ -16,8 +16,8 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.0
-  connectivity_widget:
-    path: packages/connectivity_widget
+  check_connectivity:
+    path: packages/check_connectivity
 dev_dependencies:
   flutter_test:
     sdk: flutter
